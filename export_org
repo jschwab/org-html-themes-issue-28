@@ -1,0 +1,17 @@
+#!/bin/bash
+
+do_one(){
+    emacs --batch -Q -l batch-export.el $1.org -f org-html-export-to-html
+    mv $1.html $2-$1.html
+}
+
+ln -sf theme-readtheorg-local-stock.setup theme-readtheorg-local.setup
+do_one short scroll
+do_one long scroll
+
+ln -sf theme-readtheorg-local-tweak.setup theme-readtheorg-local.setup
+do_one short hidden
+do_one long hidden
+
+emacs --batch -Q -l batch-export.el index.org -f org-html-export-to-html
+

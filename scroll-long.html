@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-07-11 Mon 07:15 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Long TOC</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Josiah Schwab" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Long TOC</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline4">Part   1</a>
+<ul>
+<li><a href="#orgheadline1">Part a</a></li>
+<li><a href="#orgheadline2">Part b</a></li>
+<li><a href="#orgheadline3">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline8">Part   2</a>
+<ul>
+<li><a href="#orgheadline5">Part a</a></li>
+<li><a href="#orgheadline6">Part b</a></li>
+<li><a href="#orgheadline7">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline12">Part   3</a>
+<ul>
+<li><a href="#orgheadline9">Part a</a></li>
+<li><a href="#orgheadline10">Part b</a></li>
+<li><a href="#orgheadline11">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline16">Part   4</a>
+<ul>
+<li><a href="#orgheadline13">Part a</a></li>
+<li><a href="#orgheadline14">Part b</a></li>
+<li><a href="#orgheadline15">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline20">Part   5</a>
+<ul>
+<li><a href="#orgheadline17">Part a</a></li>
+<li><a href="#orgheadline18">Part b</a></li>
+<li><a href="#orgheadline19">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline24">Part   6</a>
+<ul>
+<li><a href="#orgheadline21">Part a</a></li>
+<li><a href="#orgheadline22">Part b</a></li>
+<li><a href="#orgheadline23">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline28">Part   7</a>
+<ul>
+<li><a href="#orgheadline25">Part a</a></li>
+<li><a href="#orgheadline26">Part b</a></li>
+<li><a href="#orgheadline27">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline32">Part   8</a>
+<ul>
+<li><a href="#orgheadline29">Part a</a></li>
+<li><a href="#orgheadline30">Part b</a></li>
+<li><a href="#orgheadline31">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline36">Part   9</a>
+<ul>
+<li><a href="#orgheadline33">Part a</a></li>
+<li><a href="#orgheadline34">Part b</a></li>
+<li><a href="#orgheadline35">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline40">Part  10</a>
+<ul>
+<li><a href="#orgheadline37">Part a</a></li>
+<li><a href="#orgheadline38">Part b</a></li>
+<li><a href="#orgheadline39">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline44">Part  11</a>
+<ul>
+<li><a href="#orgheadline41">Part a</a></li>
+<li><a href="#orgheadline42">Part b</a></li>
+<li><a href="#orgheadline43">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline48">Part  12</a>
+<ul>
+<li><a href="#orgheadline45">Part a</a></li>
+<li><a href="#orgheadline46">Part b</a></li>
+<li><a href="#orgheadline47">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline52">Part  13</a>
+<ul>
+<li><a href="#orgheadline49">Part a</a></li>
+<li><a href="#orgheadline50">Part b</a></li>
+<li><a href="#orgheadline51">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline56">Part  14</a>
+<ul>
+<li><a href="#orgheadline53">Part a</a></li>
+<li><a href="#orgheadline54">Part b</a></li>
+<li><a href="#orgheadline55">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline60">Part  15</a>
+<ul>
+<li><a href="#orgheadline57">Part a</a></li>
+<li><a href="#orgheadline58">Part b</a></li>
+<li><a href="#orgheadline59">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline64">Part  16</a>
+<ul>
+<li><a href="#orgheadline61">Part a</a></li>
+<li><a href="#orgheadline62">Part b</a></li>
+<li><a href="#orgheadline63">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline68">Part  17</a>
+<ul>
+<li><a href="#orgheadline65">Part a</a></li>
+<li><a href="#orgheadline66">Part b</a></li>
+<li><a href="#orgheadline67">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline72">Part  18</a>
+<ul>
+<li><a href="#orgheadline69">Part a</a></li>
+<li><a href="#orgheadline70">Part b</a></li>
+<li><a href="#orgheadline71">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline76">Part  19</a>
+<ul>
+<li><a href="#orgheadline73">Part a</a></li>
+<li><a href="#orgheadline74">Part b</a></li>
+<li><a href="#orgheadline75">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline80">Part  20</a>
+<ul>
+<li><a href="#orgheadline77">Part a</a></li>
+<li><a href="#orgheadline78">Part b</a></li>
+<li><a href="#orgheadline79">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline84">Part  21</a>
+<ul>
+<li><a href="#orgheadline81">Part a</a></li>
+<li><a href="#orgheadline82">Part b</a></li>
+<li><a href="#orgheadline83">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline88">Part  22</a>
+<ul>
+<li><a href="#orgheadline85">Part a</a></li>
+<li><a href="#orgheadline86">Part b</a></li>
+<li><a href="#orgheadline87">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline92">Part  23</a>
+<ul>
+<li><a href="#orgheadline89">Part a</a></li>
+<li><a href="#orgheadline90">Part b</a></li>
+<li><a href="#orgheadline91">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline96">Part  24</a>
+<ul>
+<li><a href="#orgheadline93">Part a</a></li>
+<li><a href="#orgheadline94">Part b</a></li>
+<li><a href="#orgheadline95">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline100">Part  25</a>
+<ul>
+<li><a href="#orgheadline97">Part a</a></li>
+<li><a href="#orgheadline98">Part b</a></li>
+<li><a href="#orgheadline99">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline104">Part  26</a>
+<ul>
+<li><a href="#orgheadline101">Part a</a></li>
+<li><a href="#orgheadline102">Part b</a></li>
+<li><a href="#orgheadline103">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline108">Part  27</a>
+<ul>
+<li><a href="#orgheadline105">Part a</a></li>
+<li><a href="#orgheadline106">Part b</a></li>
+<li><a href="#orgheadline107">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline112">Part  28</a>
+<ul>
+<li><a href="#orgheadline109">Part a</a></li>
+<li><a href="#orgheadline110">Part b</a></li>
+<li><a href="#orgheadline111">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline116">Part  29</a>
+<ul>
+<li><a href="#orgheadline113">Part a</a></li>
+<li><a href="#orgheadline114">Part b</a></li>
+<li><a href="#orgheadline115">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline120">Part  30</a>
+<ul>
+<li><a href="#orgheadline117">Part a</a></li>
+<li><a href="#orgheadline118">Part b</a></li>
+<li><a href="#orgheadline119">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline124">Part  31</a>
+<ul>
+<li><a href="#orgheadline121">Part a</a></li>
+<li><a href="#orgheadline122">Part b</a></li>
+<li><a href="#orgheadline123">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline128">Part  32</a>
+<ul>
+<li><a href="#orgheadline125">Part a</a></li>
+<li><a href="#orgheadline126">Part b</a></li>
+<li><a href="#orgheadline127">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline132">Part  33</a>
+<ul>
+<li><a href="#orgheadline129">Part a</a></li>
+<li><a href="#orgheadline130">Part b</a></li>
+<li><a href="#orgheadline131">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline136">Part  34</a>
+<ul>
+<li><a href="#orgheadline133">Part a</a></li>
+<li><a href="#orgheadline134">Part b</a></li>
+<li><a href="#orgheadline135">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline140">Part  35</a>
+<ul>
+<li><a href="#orgheadline137">Part a</a></li>
+<li><a href="#orgheadline138">Part b</a></li>
+<li><a href="#orgheadline139">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline144">Part  36</a>
+<ul>
+<li><a href="#orgheadline141">Part a</a></li>
+<li><a href="#orgheadline142">Part b</a></li>
+<li><a href="#orgheadline143">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline148">Part  37</a>
+<ul>
+<li><a href="#orgheadline145">Part a</a></li>
+<li><a href="#orgheadline146">Part b</a></li>
+<li><a href="#orgheadline147">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline152">Part  38</a>
+<ul>
+<li><a href="#orgheadline149">Part a</a></li>
+<li><a href="#orgheadline150">Part b</a></li>
+<li><a href="#orgheadline151">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline156">Part  39</a>
+<ul>
+<li><a href="#orgheadline153">Part a</a></li>
+<li><a href="#orgheadline154">Part b</a></li>
+<li><a href="#orgheadline155">Part c</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline160">Part  40</a>
+<ul>
+<li><a href="#orgheadline157">Part a</a></li>
+<li><a href="#orgheadline158">Part b</a></li>
+<li><a href="#orgheadline159">Part c</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">Part   1</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+</div><div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1">Part a</h3>
+</div>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">Part b</h3>
+</div>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8">Part   2</h2>
+<div class="outline-text-2" id="text-orgheadline8">
+</div><div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5">Part a</h3>
+</div>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6">Part b</h3>
+</div>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12">Part   3</h2>
+<div class="outline-text-2" id="text-orgheadline12">
+</div><div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9">Part a</h3>
+</div>
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10">Part b</h3>
+</div>
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16">Part   4</h2>
+<div class="outline-text-2" id="text-orgheadline16">
+</div><div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13">Part a</h3>
+</div>
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14">Part b</h3>
+</div>
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20">Part   5</h2>
+<div class="outline-text-2" id="text-orgheadline20">
+</div><div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17">Part a</h3>
+</div>
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18">Part b</h3>
+</div>
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline24" class="outline-2">
+<h2 id="orgheadline24">Part   6</h2>
+<div class="outline-text-2" id="text-orgheadline24">
+</div><div id="outline-container-orgheadline21" class="outline-3">
+<h3 id="orgheadline21">Part a</h3>
+</div>
+<div id="outline-container-orgheadline22" class="outline-3">
+<h3 id="orgheadline22">Part b</h3>
+</div>
+<div id="outline-container-orgheadline23" class="outline-3">
+<h3 id="orgheadline23">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline28" class="outline-2">
+<h2 id="orgheadline28">Part   7</h2>
+<div class="outline-text-2" id="text-orgheadline28">
+</div><div id="outline-container-orgheadline25" class="outline-3">
+<h3 id="orgheadline25">Part a</h3>
+</div>
+<div id="outline-container-orgheadline26" class="outline-3">
+<h3 id="orgheadline26">Part b</h3>
+</div>
+<div id="outline-container-orgheadline27" class="outline-3">
+<h3 id="orgheadline27">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline32" class="outline-2">
+<h2 id="orgheadline32">Part   8</h2>
+<div class="outline-text-2" id="text-orgheadline32">
+</div><div id="outline-container-orgheadline29" class="outline-3">
+<h3 id="orgheadline29">Part a</h3>
+</div>
+<div id="outline-container-orgheadline30" class="outline-3">
+<h3 id="orgheadline30">Part b</h3>
+</div>
+<div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline36" class="outline-2">
+<h2 id="orgheadline36">Part   9</h2>
+<div class="outline-text-2" id="text-orgheadline36">
+</div><div id="outline-container-orgheadline33" class="outline-3">
+<h3 id="orgheadline33">Part a</h3>
+</div>
+<div id="outline-container-orgheadline34" class="outline-3">
+<h3 id="orgheadline34">Part b</h3>
+</div>
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline40" class="outline-2">
+<h2 id="orgheadline40">Part  10</h2>
+<div class="outline-text-2" id="text-orgheadline40">
+</div><div id="outline-container-orgheadline37" class="outline-3">
+<h3 id="orgheadline37">Part a</h3>
+</div>
+<div id="outline-container-orgheadline38" class="outline-3">
+<h3 id="orgheadline38">Part b</h3>
+</div>
+<div id="outline-container-orgheadline39" class="outline-3">
+<h3 id="orgheadline39">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline44" class="outline-2">
+<h2 id="orgheadline44">Part  11</h2>
+<div class="outline-text-2" id="text-orgheadline44">
+</div><div id="outline-container-orgheadline41" class="outline-3">
+<h3 id="orgheadline41">Part a</h3>
+</div>
+<div id="outline-container-orgheadline42" class="outline-3">
+<h3 id="orgheadline42">Part b</h3>
+</div>
+<div id="outline-container-orgheadline43" class="outline-3">
+<h3 id="orgheadline43">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline48" class="outline-2">
+<h2 id="orgheadline48">Part  12</h2>
+<div class="outline-text-2" id="text-orgheadline48">
+</div><div id="outline-container-orgheadline45" class="outline-3">
+<h3 id="orgheadline45">Part a</h3>
+</div>
+<div id="outline-container-orgheadline46" class="outline-3">
+<h3 id="orgheadline46">Part b</h3>
+</div>
+<div id="outline-container-orgheadline47" class="outline-3">
+<h3 id="orgheadline47">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline52" class="outline-2">
+<h2 id="orgheadline52">Part  13</h2>
+<div class="outline-text-2" id="text-orgheadline52">
+</div><div id="outline-container-orgheadline49" class="outline-3">
+<h3 id="orgheadline49">Part a</h3>
+</div>
+<div id="outline-container-orgheadline50" class="outline-3">
+<h3 id="orgheadline50">Part b</h3>
+</div>
+<div id="outline-container-orgheadline51" class="outline-3">
+<h3 id="orgheadline51">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline56" class="outline-2">
+<h2 id="orgheadline56">Part  14</h2>
+<div class="outline-text-2" id="text-orgheadline56">
+</div><div id="outline-container-orgheadline53" class="outline-3">
+<h3 id="orgheadline53">Part a</h3>
+</div>
+<div id="outline-container-orgheadline54" class="outline-3">
+<h3 id="orgheadline54">Part b</h3>
+</div>
+<div id="outline-container-orgheadline55" class="outline-3">
+<h3 id="orgheadline55">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline60" class="outline-2">
+<h2 id="orgheadline60">Part  15</h2>
+<div class="outline-text-2" id="text-orgheadline60">
+</div><div id="outline-container-orgheadline57" class="outline-3">
+<h3 id="orgheadline57">Part a</h3>
+</div>
+<div id="outline-container-orgheadline58" class="outline-3">
+<h3 id="orgheadline58">Part b</h3>
+</div>
+<div id="outline-container-orgheadline59" class="outline-3">
+<h3 id="orgheadline59">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline64" class="outline-2">
+<h2 id="orgheadline64">Part  16</h2>
+<div class="outline-text-2" id="text-orgheadline64">
+</div><div id="outline-container-orgheadline61" class="outline-3">
+<h3 id="orgheadline61">Part a</h3>
+</div>
+<div id="outline-container-orgheadline62" class="outline-3">
+<h3 id="orgheadline62">Part b</h3>
+</div>
+<div id="outline-container-orgheadline63" class="outline-3">
+<h3 id="orgheadline63">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline68" class="outline-2">
+<h2 id="orgheadline68">Part  17</h2>
+<div class="outline-text-2" id="text-orgheadline68">
+</div><div id="outline-container-orgheadline65" class="outline-3">
+<h3 id="orgheadline65">Part a</h3>
+</div>
+<div id="outline-container-orgheadline66" class="outline-3">
+<h3 id="orgheadline66">Part b</h3>
+</div>
+<div id="outline-container-orgheadline67" class="outline-3">
+<h3 id="orgheadline67">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline72" class="outline-2">
+<h2 id="orgheadline72">Part  18</h2>
+<div class="outline-text-2" id="text-orgheadline72">
+</div><div id="outline-container-orgheadline69" class="outline-3">
+<h3 id="orgheadline69">Part a</h3>
+</div>
+<div id="outline-container-orgheadline70" class="outline-3">
+<h3 id="orgheadline70">Part b</h3>
+</div>
+<div id="outline-container-orgheadline71" class="outline-3">
+<h3 id="orgheadline71">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline76" class="outline-2">
+<h2 id="orgheadline76">Part  19</h2>
+<div class="outline-text-2" id="text-orgheadline76">
+</div><div id="outline-container-orgheadline73" class="outline-3">
+<h3 id="orgheadline73">Part a</h3>
+</div>
+<div id="outline-container-orgheadline74" class="outline-3">
+<h3 id="orgheadline74">Part b</h3>
+</div>
+<div id="outline-container-orgheadline75" class="outline-3">
+<h3 id="orgheadline75">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline80" class="outline-2">
+<h2 id="orgheadline80">Part  20</h2>
+<div class="outline-text-2" id="text-orgheadline80">
+</div><div id="outline-container-orgheadline77" class="outline-3">
+<h3 id="orgheadline77">Part a</h3>
+</div>
+<div id="outline-container-orgheadline78" class="outline-3">
+<h3 id="orgheadline78">Part b</h3>
+</div>
+<div id="outline-container-orgheadline79" class="outline-3">
+<h3 id="orgheadline79">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline84" class="outline-2">
+<h2 id="orgheadline84">Part  21</h2>
+<div class="outline-text-2" id="text-orgheadline84">
+</div><div id="outline-container-orgheadline81" class="outline-3">
+<h3 id="orgheadline81">Part a</h3>
+</div>
+<div id="outline-container-orgheadline82" class="outline-3">
+<h3 id="orgheadline82">Part b</h3>
+</div>
+<div id="outline-container-orgheadline83" class="outline-3">
+<h3 id="orgheadline83">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline88" class="outline-2">
+<h2 id="orgheadline88">Part  22</h2>
+<div class="outline-text-2" id="text-orgheadline88">
+</div><div id="outline-container-orgheadline85" class="outline-3">
+<h3 id="orgheadline85">Part a</h3>
+</div>
+<div id="outline-container-orgheadline86" class="outline-3">
+<h3 id="orgheadline86">Part b</h3>
+</div>
+<div id="outline-container-orgheadline87" class="outline-3">
+<h3 id="orgheadline87">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline92" class="outline-2">
+<h2 id="orgheadline92">Part  23</h2>
+<div class="outline-text-2" id="text-orgheadline92">
+</div><div id="outline-container-orgheadline89" class="outline-3">
+<h3 id="orgheadline89">Part a</h3>
+</div>
+<div id="outline-container-orgheadline90" class="outline-3">
+<h3 id="orgheadline90">Part b</h3>
+</div>
+<div id="outline-container-orgheadline91" class="outline-3">
+<h3 id="orgheadline91">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline96" class="outline-2">
+<h2 id="orgheadline96">Part  24</h2>
+<div class="outline-text-2" id="text-orgheadline96">
+</div><div id="outline-container-orgheadline93" class="outline-3">
+<h3 id="orgheadline93">Part a</h3>
+</div>
+<div id="outline-container-orgheadline94" class="outline-3">
+<h3 id="orgheadline94">Part b</h3>
+</div>
+<div id="outline-container-orgheadline95" class="outline-3">
+<h3 id="orgheadline95">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline100" class="outline-2">
+<h2 id="orgheadline100">Part  25</h2>
+<div class="outline-text-2" id="text-orgheadline100">
+</div><div id="outline-container-orgheadline97" class="outline-3">
+<h3 id="orgheadline97">Part a</h3>
+</div>
+<div id="outline-container-orgheadline98" class="outline-3">
+<h3 id="orgheadline98">Part b</h3>
+</div>
+<div id="outline-container-orgheadline99" class="outline-3">
+<h3 id="orgheadline99">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline104" class="outline-2">
+<h2 id="orgheadline104">Part  26</h2>
+<div class="outline-text-2" id="text-orgheadline104">
+</div><div id="outline-container-orgheadline101" class="outline-3">
+<h3 id="orgheadline101">Part a</h3>
+</div>
+<div id="outline-container-orgheadline102" class="outline-3">
+<h3 id="orgheadline102">Part b</h3>
+</div>
+<div id="outline-container-orgheadline103" class="outline-3">
+<h3 id="orgheadline103">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline108" class="outline-2">
+<h2 id="orgheadline108">Part  27</h2>
+<div class="outline-text-2" id="text-orgheadline108">
+</div><div id="outline-container-orgheadline105" class="outline-3">
+<h3 id="orgheadline105">Part a</h3>
+</div>
+<div id="outline-container-orgheadline106" class="outline-3">
+<h3 id="orgheadline106">Part b</h3>
+</div>
+<div id="outline-container-orgheadline107" class="outline-3">
+<h3 id="orgheadline107">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline112" class="outline-2">
+<h2 id="orgheadline112">Part  28</h2>
+<div class="outline-text-2" id="text-orgheadline112">
+</div><div id="outline-container-orgheadline109" class="outline-3">
+<h3 id="orgheadline109">Part a</h3>
+</div>
+<div id="outline-container-orgheadline110" class="outline-3">
+<h3 id="orgheadline110">Part b</h3>
+</div>
+<div id="outline-container-orgheadline111" class="outline-3">
+<h3 id="orgheadline111">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline116" class="outline-2">
+<h2 id="orgheadline116">Part  29</h2>
+<div class="outline-text-2" id="text-orgheadline116">
+</div><div id="outline-container-orgheadline113" class="outline-3">
+<h3 id="orgheadline113">Part a</h3>
+</div>
+<div id="outline-container-orgheadline114" class="outline-3">
+<h3 id="orgheadline114">Part b</h3>
+</div>
+<div id="outline-container-orgheadline115" class="outline-3">
+<h3 id="orgheadline115">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline120" class="outline-2">
+<h2 id="orgheadline120">Part  30</h2>
+<div class="outline-text-2" id="text-orgheadline120">
+</div><div id="outline-container-orgheadline117" class="outline-3">
+<h3 id="orgheadline117">Part a</h3>
+</div>
+<div id="outline-container-orgheadline118" class="outline-3">
+<h3 id="orgheadline118">Part b</h3>
+</div>
+<div id="outline-container-orgheadline119" class="outline-3">
+<h3 id="orgheadline119">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline124" class="outline-2">
+<h2 id="orgheadline124">Part  31</h2>
+<div class="outline-text-2" id="text-orgheadline124">
+</div><div id="outline-container-orgheadline121" class="outline-3">
+<h3 id="orgheadline121">Part a</h3>
+</div>
+<div id="outline-container-orgheadline122" class="outline-3">
+<h3 id="orgheadline122">Part b</h3>
+</div>
+<div id="outline-container-orgheadline123" class="outline-3">
+<h3 id="orgheadline123">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline128" class="outline-2">
+<h2 id="orgheadline128">Part  32</h2>
+<div class="outline-text-2" id="text-orgheadline128">
+</div><div id="outline-container-orgheadline125" class="outline-3">
+<h3 id="orgheadline125">Part a</h3>
+</div>
+<div id="outline-container-orgheadline126" class="outline-3">
+<h3 id="orgheadline126">Part b</h3>
+</div>
+<div id="outline-container-orgheadline127" class="outline-3">
+<h3 id="orgheadline127">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline132" class="outline-2">
+<h2 id="orgheadline132">Part  33</h2>
+<div class="outline-text-2" id="text-orgheadline132">
+</div><div id="outline-container-orgheadline129" class="outline-3">
+<h3 id="orgheadline129">Part a</h3>
+</div>
+<div id="outline-container-orgheadline130" class="outline-3">
+<h3 id="orgheadline130">Part b</h3>
+</div>
+<div id="outline-container-orgheadline131" class="outline-3">
+<h3 id="orgheadline131">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline136" class="outline-2">
+<h2 id="orgheadline136">Part  34</h2>
+<div class="outline-text-2" id="text-orgheadline136">
+</div><div id="outline-container-orgheadline133" class="outline-3">
+<h3 id="orgheadline133">Part a</h3>
+</div>
+<div id="outline-container-orgheadline134" class="outline-3">
+<h3 id="orgheadline134">Part b</h3>
+</div>
+<div id="outline-container-orgheadline135" class="outline-3">
+<h3 id="orgheadline135">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline140" class="outline-2">
+<h2 id="orgheadline140">Part  35</h2>
+<div class="outline-text-2" id="text-orgheadline140">
+</div><div id="outline-container-orgheadline137" class="outline-3">
+<h3 id="orgheadline137">Part a</h3>
+</div>
+<div id="outline-container-orgheadline138" class="outline-3">
+<h3 id="orgheadline138">Part b</h3>
+</div>
+<div id="outline-container-orgheadline139" class="outline-3">
+<h3 id="orgheadline139">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline144" class="outline-2">
+<h2 id="orgheadline144">Part  36</h2>
+<div class="outline-text-2" id="text-orgheadline144">
+</div><div id="outline-container-orgheadline141" class="outline-3">
+<h3 id="orgheadline141">Part a</h3>
+</div>
+<div id="outline-container-orgheadline142" class="outline-3">
+<h3 id="orgheadline142">Part b</h3>
+</div>
+<div id="outline-container-orgheadline143" class="outline-3">
+<h3 id="orgheadline143">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline148" class="outline-2">
+<h2 id="orgheadline148">Part  37</h2>
+<div class="outline-text-2" id="text-orgheadline148">
+</div><div id="outline-container-orgheadline145" class="outline-3">
+<h3 id="orgheadline145">Part a</h3>
+</div>
+<div id="outline-container-orgheadline146" class="outline-3">
+<h3 id="orgheadline146">Part b</h3>
+</div>
+<div id="outline-container-orgheadline147" class="outline-3">
+<h3 id="orgheadline147">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline152" class="outline-2">
+<h2 id="orgheadline152">Part  38</h2>
+<div class="outline-text-2" id="text-orgheadline152">
+</div><div id="outline-container-orgheadline149" class="outline-3">
+<h3 id="orgheadline149">Part a</h3>
+</div>
+<div id="outline-container-orgheadline150" class="outline-3">
+<h3 id="orgheadline150">Part b</h3>
+</div>
+<div id="outline-container-orgheadline151" class="outline-3">
+<h3 id="orgheadline151">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline156" class="outline-2">
+<h2 id="orgheadline156">Part  39</h2>
+<div class="outline-text-2" id="text-orgheadline156">
+</div><div id="outline-container-orgheadline153" class="outline-3">
+<h3 id="orgheadline153">Part a</h3>
+</div>
+<div id="outline-container-orgheadline154" class="outline-3">
+<h3 id="orgheadline154">Part b</h3>
+</div>
+<div id="outline-container-orgheadline155" class="outline-3">
+<h3 id="orgheadline155">Part c</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline160" class="outline-2">
+<h2 id="orgheadline160">Part  40</h2>
+<div class="outline-text-2" id="text-orgheadline160">
+</div><div id="outline-container-orgheadline157" class="outline-3">
+<h3 id="orgheadline157">Part a</h3>
+</div>
+<div id="outline-container-orgheadline158" class="outline-3">
+<h3 id="orgheadline158">Part b</h3>
+</div>
+<div id="outline-container-orgheadline159" class="outline-3">
+<h3 id="orgheadline159">Part c</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Josiah Schwab</p>
+<p class="date">Created: 2016-07-11 Mon 07:15</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

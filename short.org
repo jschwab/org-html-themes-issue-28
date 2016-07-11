@@ -1,0 +1,24 @@
+#+TITLE: Short TOC
+#+OPTIONS: num:nil ^:nil H:6
+#+SETUPFILE: theme-readtheorg-local.setup
+
+* Part 1
+** Part a
+** Part b
+** Part c
+* Part 2
+** Part a
+** Part b
+** Part c
+* Part 3
+** Part a
+** Part b
+** Part c
+* Part 4
+** Part a
+** Part b
+** Part c
+* Part 5
+** Part a
+** Part b
+** Part c

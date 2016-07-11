@@ -1,0 +1,6 @@
+#+OPTIONS: toc:nil
+* Examples for [[https://github.com/fniessen/org-html-themes/issues/28][Issue #28]]
+ |           | overflow-y: scroll; | overflow-y:hidden; |
+ |-----------+---------------------+--------------------|
+ | Short ToC | [[file:scroll-short.html][link]]                | [[file:hidden-short.html][link]]               |
+ | Long ToC  | [[file:scroll-long.html][link]]                | [[file:hidden-long.html][link]]               |
